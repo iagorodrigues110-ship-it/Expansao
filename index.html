@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion Pipeline Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:#f6f7fb}
+.header{background-color:#fff;padding:20px 40px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.header h1{color:#323338;font-size:28px;font-weight:400}
+.dashboard-container{width:100%;height:calc(100vh - 80px);padding:20px}
+.dashboard-frame{width:100%;height:100%;border:none;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);background-color:#fff}
+.loading{display:flex;justify-content:center;align-items:center;height:100%;font-size:18px;color:#676879}
+</style>
+</head>
+<body>
+<div class="header"><h1>📊 Expansion Pipeline Dashboard</h1></div>
+<div class="dashboard-container">
+<iframe class="dashboard-frame" src="https://sede-amorsaude.monday.com/boards/18414046476" frameborder="0" allowfullscreen></iframe>
+<div class="loading">Carregando dashboard...</div>
+</div>
+<script>
+const iframe=document.querySelector('.dashboard-frame');
+const loading=document.querySelector('.loading');
+iframe.addEventListener('load',function(){loading.style.display='none'});
+</script>
+</body>
+</html>
